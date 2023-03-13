@@ -9,6 +9,21 @@
     <script src="algos/sjf.js"></script>
 </head>
 <body>
+  <script>
+      function Div() {
+         var Priority = document.getElementById("algo");
+         var dvPriority = document.getElementById("priorityTable");
+         if (Priority.value == "pnp"){
+           priorityTable.style.display = "block";
+         }
+         else if (Priority.value == "pp"){
+           priorityTable.style.display = "block";
+         }
+         else{
+           priorityTable.style.display = "none";
+         }
+      }
+  </script>
   <form id="algorithms-form">
     <label for="algo"><h2>Algorithms : </h2></label>
     <select name="algo" id="algo">
@@ -30,6 +45,21 @@
     <p id="cn"> Click on the button to add Processes</p>
     <button type="button" onclick="addRow()">Add Process</button>
     <button type="button" onclick="deleteRow()">Remove Process</button>
+  </div>
+  <div id="priorityTable" style="display: none">
+    <h2>Priority Table</h2>
+      <table id = "priorityEntry">
+        <tr id = "tableHeadersInput" align= center>
+          <th>Process No.</th>
+          <td>Process 1</td>
+          <td>Process 2</td>
+        </tr>
+        <tr id = "priorityNo.">
+          <th>Priority No.</th>
+          <td><input type="text" id="PRN1"/></td>
+          <td><input type="text" id="PRN2"/></td>
+        </tr>
+      </table>
   </div>
 
 <!-- Processe Table -->
